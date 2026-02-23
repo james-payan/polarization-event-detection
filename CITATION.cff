@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Polarization Event Detection"
+type: software
+authors:
+  - family-names: "Payan Caicedo"
+    given-names: "James Andres"
+repository-code: "https://github.com/james-payan/polarization-event-detection"
+url: "https://github.com/james-payan/polarization-event-detection"
+license: "MIT"
+abstract: "Code and notebooks for event detection in social media using polarization, sentiment, and volume signals, with a case study on the Colombian pension reform debate on X (Twitter)."
+keywords:
+  - event detection
+  - polarization
+  - social media
+  - X
+  - Twitter
+  - Colombia
