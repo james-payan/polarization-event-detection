@@ -1,0 +1,29 @@
+# Pinned for reproducible installs (any OS). Generated 2026-04-02 from conda env
+# `trabajo_integrador` (Python 3.10.15, win-64) using:
+#   conda run -n trabajo_integrador conda list --export
+#   conda run -n trabajo_integrador pip freeze
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# MEC (`MECNormalized`): same commit as the reference environment’s pip install:
+measures @ git+https://github.com/Ulvenforst/pol_measures.git@2dc1ae40e31aa5be98f7b4c93eec464c148f8a59
+
+# Core stack (versions aligned with conda/pip in trabajo_integrador)
+numpy==1.26.4
+pandas==2.2.3
+matplotlib==3.9.2
+scipy==1.15.3
+seaborn==0.13.2
+Pillow==10.4.0
+scikit-learn==1.5.1
+
+# Notebook runtime
+ipykernel==6.29.5
+jupyter==1.0.0
+notebook==7.2.2
+nbclient==0.10.0
+
+# Event-detection notebook
+ruptures==1.1.9
+yellowbrick==1.5
