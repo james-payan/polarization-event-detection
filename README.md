@@ -4,8 +4,6 @@ This repository contains code and notebooks used to study **event detection in s
 
 The case study is public debate around the **Colombian pension reform (June–July 2024)** using posts collected from **X (formerly Twitter)**.
 
-> **Monorepo note:** In this thesis project, the bundle lives under `event-detection/article-files/`. When you publish, **copy this folder’s contents** into a standalone public GitHub repository (it is **not** the full monorepo).
-
 ## Project goal
 
 The main objective is to evaluate whether **polarization dynamics** can serve as a reliable signal for detecting socially relevant events in social media conversations, compared to volume- and sentiment-based detectors.
