@@ -65,6 +65,8 @@ After copying to a **standalone** public repo, adjust the path to `notebooks/eve
 
 On some setups, `jupyter nbconvert --execute` fails because of a **mistune / nbconvert** import mismatch; **`nbclient`** (listed in `requirements.txt`) avoids that path.
 
+**Notebook outputs in this repository:** The checked-in copy of `notebooks/event_detection_pension_reform_public.ipynb` **includes executed cell outputs** (tables and figures) on purpose. Readers can review results on GitHub or in Jupyter **without** installing Python or running the environment. To reproduce or update numbers locally, run all cells after `pip install -r requirements.txt` (or use the headless command above).
+
 ## Article tables (reproducibility checklist)
 
 These are the manuscript targets the notebook is written to match. **Table `tab:detected_events`** reports rounded metrics; the notebook may print more digits (e.g. 0.714286 vs **0.71** precision).
@@ -77,13 +79,13 @@ These are the manuscript targets the notebook is written to match. **Table `tab:
 
 **Verified (2026-04-02):** The notebook was executed end-to-end with **`trabajo_integrador`** on this repo using **`nbclient`** from the monorepo root; metrics printed in the evaluation section match the article values within rounding.
 
-## Clearing outputs before git push
+## Optional: clearing outputs for smaller diffs
 
-Prefer a clean notebook JSON for version control:
+If you maintain this repository and prefer a **smaller** `.ipynb` file or cleaner `git diff`s after edits, you may strip outputs before committing:
 
 `jupyter nbconvert --clear-output --inplace notebooks/event_detection_pension_reform_public.ipynb`
 
-(if `nbconvert` imports correctly in your env), or clear outputs from the Jupyter UI.
+(if `nbconvert` imports correctly in your env), or clear outputs from the Jupyter UI—then re-run and commit outputs again before a release so readers still see figures and tables in the default branch.
 
 ## License
 
