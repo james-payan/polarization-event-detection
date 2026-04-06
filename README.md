@@ -12,11 +12,11 @@ The main objective is to evaluate whether **polarization dynamics** can serve as
 
 ## What’s included
 
-- Data loading and daily time-series construction from anonymized Likert stance labels
-- Baseline event detection (tweet volume and sentiment proportions) with parameter search and a local significance filter
+- Data loading and daily time-series construction from anonymized Likert stance labels (**precomputed in `PensionReform.csv`**; see note below)
+- Baseline event detection (tweet volume and sentiment proportions) with parameter search; the sentiment baseline applies a **local significance filter** on candidate spike days (implementation in the notebook—the manuscript omits this detail to keep the main text readable)
 - Polarization-based event detection using **MEC** ($\Delta$MEC vs IQR thresholds)
 - Parameter exploration, final configurations, and evaluation (precision, recall, F1) against the sentiment baseline as reference
-- Supporting figures (e.g. MEC overview) and reproducibility metadata (`requirements.txt`, optional full conda export)
+- Supporting figures (e.g. MEC overview) and reproducibility metadata (`requirements.txt`)
 
 ## Repository structure
 
@@ -26,7 +26,8 @@ The main objective is to evaluate whether **polarization dynamics** can serve as
 | `notebooks/event_detection_pension_reform_public.ipynb` | Main reproducible analysis aligned with the paper’s tables and figures. |
 | `figures/` | Static assets for EDA (`termometers.png`, `escalas_polarizacion.png`); notebook can write `modelo_polarizacion_final.png` here. |
 | `requirements.txt` | Pinned dependencies from conda env `trabajo_integrador` (see below). |
-| `conda-trabajo_integrador-export.txt` | Full `conda list --export` from the same env (reference only; use `requirements.txt` for `pip`). |
+
+**Figures in the paper only:** The manuscript may include a full data pipeline schematic (e.g. `datapipeline.png`). That asset is **not** part of this repository; only analysis figures and EDA assets under `figures/` are provided here.
 
 ## What is excluded
 
@@ -36,6 +37,8 @@ The main objective is to evaluate whether **polarization dynamics** can serve as
 ## Data and privacy
 
 To respect platform and sharing rules, this bundle includes only **derived, anonymized fields** (e.g. surrogate IDs, timestamps, precomputed Likert labels)—**not** raw tweet text or real user identifiers.
+
+**Stance labels:** The column `likert_scale_Q1` in `data/PensionReform.csv` is **already computed** (LLM-based stance coding in the study). This public bundle does **not** ship the full labeling pipeline or raw posts, to reduce risk of re-identifying individuals. **Full labeling code or scripts can be shared on reasonable request** when doing so does not conflict with platform terms or privacy obligations.
 
 ## Python version
 
@@ -86,4 +89,4 @@ Prefer a clean notebook JSON for version control:
 
 ## License
 
-This project is intended to be released under the **MIT License**. Add a `LICENSE` file to the public repository (e.g. standard MIT text) when you publish.
+This project is released under the **MIT License**; see the `LICENSE` file in the repository root.
