@@ -1,14 +1,24 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it as below."
-title: "Polarization Event Detection"
+title: "Polarization-Based Event Detection using MEC"
 type: software
+
 authors:
   - family-names: "Payan Caicedo"
     given-names: "James Andres"
+
+version: "v1.0.0"
+date-released: 2026-04-07
+
+doi: 10.5281/zenodo.19464364
+url: "https://doi.org/10.5281/zenodo.19464364"
+
 repository-code: "https://github.com/james-payan/polarization-event-detection"
-url: "https://github.com/james-payan/polarization-event-detection"
+
 license: "MIT"
+
 abstract: "Code and notebooks for event detection in social media using polarization, sentiment, and volume signals, with a case study on the Colombian pension reform debate on X (Twitter)."
+
 keywords:
   - event detection
   - polarization
