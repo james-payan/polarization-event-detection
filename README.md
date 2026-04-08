@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1164342838.svg)](https://doi.org/10.5281/zenodo.19464364)
 # Polarization-based event detection on X (Twitter) data
 
 This repository contains code and notebooks used to study **event detection in social media** using a **polarization-based signal** (MEC—minimum effort consensus) alongside baseline approaches based on **posting volume** and **stance-derived sentiment**.
